@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Github context
-        run: ${{ github.event.action }}
+        run: echo ${{ github }}
       
       - name: Execute Pulumi
         run: |
