@@ -19,7 +19,6 @@ jobs:
       
       - name: Execute Pulumi
         run: |
-          exit 1
           case ${{ github.event.action }} in
             'requested')
               action=up

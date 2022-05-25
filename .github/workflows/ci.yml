@@ -15,4 +15,4 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
       - name: Echo
-        run: echo "Hello"
+        run: exit 1
