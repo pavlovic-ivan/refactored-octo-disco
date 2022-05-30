@@ -1,7 +1,7 @@
 name: Runners Deployment
 
 on:
-  workflow_dispatch:github 
+  workflow_dispatch:
 
 jobs:
   manage-runners:
