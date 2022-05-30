@@ -2,6 +2,14 @@ name: Runners Deployment
 
 on:
   workflow_dispatch:
+    inputs:
+      action:
+        description: 'Whether workflows is created or completed'
+        required: true
+        type: choice
+        options:
+        - created
+        - completed
 
 jobs:
   manage-runners:
@@ -15,8 +23,8 @@ jobs:
       
       - name: Execute Pulumi
         run: |
-          case ${{ github.event.action }} in
-            'requested')
+          case ${{ github.event.inputs.action }} in
+            'created')
               action=up
               ;;
             'completed')
