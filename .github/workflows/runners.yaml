@@ -1,11 +1,7 @@
 name: Runners Deployment
 
-# on:
-#   workflow_run:
-#     workflows: ["CI"]
-#     types: 
-#       - completed
-#       - requested
+on:
+  workflow_dispatch:github 
 
 jobs:
   manage-runners:
